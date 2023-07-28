@@ -6,9 +6,11 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
+  {path:'',redirectTo:'sign',pathMatch:'full'},
   {path:'sign',component:SignComponent},
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
-  {path:'profile',component:ProfileComponent,canActivate:[AuthGuard]}
+  {path:'profile',component:ProfileComponent,canActivate:[AuthGuard]},
+  {path:'**',redirectTo:'login',pathMatch:'full'}
 ];
 
 @NgModule({
