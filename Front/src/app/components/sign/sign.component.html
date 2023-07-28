@@ -1,0 +1,35 @@
+<div class="sign-container">
+    <div [class]="loginClass">
+        <form (submit)="login(user,pass)">
+            <h2 class="titulo">Login</h2>
+            <div class="input-container">
+                <input type="text" name="user" placeholder="Username" #user>
+            </div>
+            <div class="input-container">
+                <input type="password" name="pass" placeholder="Password" #pass>
+            </div>
+            <div class="link">
+                <a (click)="loginClass='login oculto'; signUpClass='sign-up'">SignUp</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div [class]="signUpClass">
+        <form (submit)="signup(username,email,password)">
+            <h2 class="titulo">SignUp</h2>
+            <div class="input-container">
+                <input type="text" placeholder="Username" #username>
+            </div>
+            <div class="input-container">
+                <input type="email" placeholder="Email" #email>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" #password>
+            </div>
+            <div class="link">
+                <a (click)="loginClass='login'; signUpClass='sign-up oculto'">Login</a>
+            </div>
+            <button type="submit">SignUp</button>
+        </form>
+    </div>
+</div>

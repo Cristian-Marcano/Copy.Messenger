@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&family=Inter&family=Roboto&family=Shadows+Into+Light&display=swap');
+.NavBarChat{
+    display:flex;
+    padding:7px;
+    height: 4vh;
+    background: rgb(40, 48, 58);
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+
+.content-chats{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgb(40, 48, 58);
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.content-chat{
+    background: rgb(33, 37, 41);
+    padding:0.2vh 0.2vw;
+    display: flex;
+    height: 6.5vh;
+    border-bottom: 0.8px solid rgb(44, 48, 52);
+}
+
+.content-chat:hover{
+    background: rgb(44, 48, 52);
+}
+
+.content-chat p{
+    color: #fff;
+    margin-left: 1.5vw;
+    align-self: center;
+}
+
+.photo{
+    width: 5.2vw;
+    border-radius: 50%;
+    object-fit:fill;
+}
+
+.content-chats::-webkit-scrollbar {
+    -webkit-appearance: none; /* Ancho del scroll */
+}
+
+.content-chats::-webkit-scrollbar:vertical{
+    width:10px;
+}
+
+.content-chats::-webkit-scrollbar-button:increment,.content-chats::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.content-chats::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.content-chats::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #777;
+    /*Colordelthumb(labarradedesplazamientoensí)*/
+}
+  
+.content-chats::-webkit-scrollbar-thumb:hover {
+    background: #454545; /* Color del thumb al pasar el cursor sobre él */
+}
+
+.content-chats::-webkit-scrollbar-track {
+    /* border-radius: 10px;   */
+    background: rgb(33, 37, 41);
+}

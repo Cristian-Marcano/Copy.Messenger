@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&family=Inter&family=Roboto&family=Shadows+Into+Light&display=swap');
+.chat{
+    display: flex;
+    flex-direction: column;
+    height: 93.4vh;
+}
+.elige{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(40, 48, 58);
+    height: 93.4vh;
+}
+
+.aviso{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.BarUser{
+    display:flex;
+    height: 4vh;
+    background: rgb(40, 48, 58);
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.UserHover{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.UserHover:hover{
+    border-radius: 12px;
+    background: rgb(60, 68, 78);
+}
+
+.arrow-icono{
+    color: #fff;
+    text-align: center;
+    transform: rotate(90deg);
+    transition-property:transform;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+}
+
+.photo{
+    margin-left: 1.8vw;
+    object-fit: fill;
+    border-radius: 50%;
+    width: 2.4vw;
+}
+
+.username{
+    margin-left: 1.5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.fondo{
+    display: flex;
+    flex-direction: column;
+    background: url('../../../assets/img/photo-1475274047050-1d0c0975c63e.jpg');
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.msgs{
+    display:flex;
+    flex-direction: column;
+    overflow-x: none;
+    overflow-y: auto;
+    height: 84.4vh;
+}
+
+.other-msg{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.2vh;
+}
+
+.other{
+    width: 0;
+    height: 0;
+    border-right: .3vw solid #c0c0c0;
+    border-top: .3vh solid #c0c0c0;
+    border-left: .3vw solid transparent;
+    border-bottom: .3vh solid transparent;
+}
+
+.other-msg-box{
+    align-self: center;
+    padding: 0.7vh 0.7vw;
+    background: #c0c0c0;
+    max-width: 35vw;
+    border-radius:0% 12px 12px 12px;
+    overflow-wrap: break-word;
+}
+
+.my-msg{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.2vh;
+}
+
+.my{
+    order: 2;
+    width: 0;
+    height: 0;
+    border-right: .3vw solid transparent;
+    border-top: .3vh solid #c0c0c0;
+    border-left: .3vw solid #c0c0c0;
+    border-bottom: .3vh solid transparent;
+}
+
+.my-msg-box{
+    order: 1;
+    align-self: center;
+    padding: 0.7vh 0.7vw;
+    background: #c0c0c0;
+    max-width: 35vw;
+    border-radius:12px 0% 12px 12px;
+    overflow-wrap: break-word;
+}
+
+.option{
+    order: 0;
+    align-self: center;
+    text-align: center;
+    background: #c0c0c0;
+    border-radius: 10px;
+    margin-right: 0.75vw;
+    width: 3.5vw;
+}
+
+.option:hover{
+    background: #909090;
+}
+
+option i:hover{
+    background: #505050;
+}
+
+.msgs::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+
+.msgs::-webkit-scrollbar:vertical{
+    width: 10px;
+}
+
+.msgs::-webkit-scrollbar:horizontal{
+    height: 10px;
+}
+
+.msgs::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #777;
+}
+
+.msgs::-webkit-scrollbar-thumb:hover{
+    background: #454545;
+}
+
+.msgs::-webkit-scrollbar-track{
+    /* border-radius: 10px;   */
+    background: transparent;
+}
+
+.msgs::-webkit-scrollbar-button:increment,.msgs::-webkit-scrollbar-button{
+    display:none;
+}
+
+.Input{
+    background: transparent;
+    /* position: absolute;
+    bottom: 0; */
+
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+}
+
+.BarMsgs{
+    width: 40vw;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+.BarMsgs::placeholder{
+    color: #777;
+}
+
+.BarMsgs:focus{
+    border: none;
+    outline: none;
+}
+
+.send{
+    width: 4vw;
+    border-radius: 50%;
+    background: #740707;
+    border:none;
+    outline: none;
+    font-size: 20px;
+}
+
+.send:hover{
+    background: #640707;
+}
+
+.send-icono{
+    text-align: center;
+    /* width: 5vw; */
+    color: #fff;
+}

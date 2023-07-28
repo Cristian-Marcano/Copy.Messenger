@@ -1,0 +1,11 @@
+<div class="NavBarChat">
+    <i class="fa-solid fa-user" title="Perfil" routerLink="/profile"></i>
+    <i class="fa-solid fa-trash" *ngIf="!cancel" title="Eliminar" (click)="cancel=true"></i>
+    <i class="fa-solid fa-x" *ngIf="cancel" title="Cancelar" (click)="cancel=false"></i>
+</div>
+<div class="content-chats">
+    <div class="content-chat" *ngFor="let x of array" (click)="(!cancel) ? showChat(x.id): deleteChat(x.id)">
+        <img [src]="x.photo" class="photo" (error)="x.photo='https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg'">
+        <p>{{x.username}}</p>
+    </div>
+</div>

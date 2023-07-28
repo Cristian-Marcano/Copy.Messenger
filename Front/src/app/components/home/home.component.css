@@ -1,0 +1,14 @@
+.contenedor{
+    display:flex;
+    height: 89.4vh;
+
+    /*grid-template-columns: 30% 70%; */
+}
+
+.bar{
+    width:30%
+}
+
+.chat{
+    width: 70%;
+}

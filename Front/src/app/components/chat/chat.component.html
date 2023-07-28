@@ -1,0 +1,33 @@
+<div *ngIf="chatUser.username!='' && selectDelete()" class="chat">
+    <div class="BarUser">
+        <div class="UserHover" (click)="quitChat()">
+            <i class="fa-solid fa-arrow-down arrow-icono"></i>
+            <img [src]="chatUser.photo" alt="" class="photo" (error)="chatUser.photo='https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg'">
+        </div>
+        <span class="username">{{chatUser.username}}</span>
+    </div>
+    <div class="fondo">
+        <div class="msgs">
+            <div [ngClass]="{'other-msg':x.send_id==chatUser.id_user,'my-msg':x.send_id!=chatUser.id_user}" *ngFor="let x of msgs" (contextmenu)="verifUser($event,x.send_id,x.id)" (blur)="deleteMsgs=0">
+                <div [ngClass]="{'other':x.send_id==chatUser.id_user,'my':x.send_id!=chatUser.id_user}"></div>
+                <div [ngClass]="{'other-msg-box':x.send_id==chatUser.id_user,'my-msg-box':x.send_id!=chatUser.id_user}">
+                    <span>{{x.msgtext}}</span>
+                </div>
+                <div class="option" *ngIf="x.id==deleteMsgs">
+                    <i class="fa-solid fa-trash" title="Eliminar" (click)="deleteMsg(x.id,x.id_chat)"></i>
+                     | 
+                    <i class="fa-solid fa-x" title="Cancelar" (click)="deleteMsgs=0"></i>
+                </div>
+            </div>
+        </div>
+        <form class="Input" (submit)="sendMsgs()">
+            <input type="text" placeholder="Mensaje" class="BarMsgs" name="mensaje" [(ngModel)]="mensaje">
+            <button type="submit" *ngIf="verifLength()" class="send" title="Enviar"><i class="fa-solid fa-paper-plane send-icono"></i></button>
+        </form>
+    </div>
+</div>
+<div *ngIf="chatUser.username=='' || !selectDelete()" class="elige">
+    <div class="aviso">
+        <span>Elige un Chat</span>
+    </div>
+</div>

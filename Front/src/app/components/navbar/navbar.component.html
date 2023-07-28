@@ -1,0 +1,29 @@
+<nav class="Navbar">
+    <a class="NavbarT" href="#">
+        <img
+          width="45"
+          alt="Angular Logo"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+        />
+        Copy.Messenger
+    </a>
+    <div class="navHistory">
+        <label for="search" class="search-label" *ngIf="showKeys()">
+            <i [class]="classIcon" (click)="pressIcon()"></i>
+            <input class="search-input" type="text" placeholder="Search" aria-label="Search" name="search" (focus)="focusInput()" (blur)="blurInput()" (input)="getSearch()" [(ngModel)]="Search">
+        </label>
+        <div class="search-history">
+            <div class="content-history" *ngIf="Search.length>0">
+                <div class="user" *ngFor="let x of arraySearch" (click)="createChat(x.id)">
+                    <img [src]="x.photo_profile" class="photo">
+                    <p>{{x.username}}</p>
+                </div>
+                <div class="user" *ngIf="operacion!=''">
+                    <p>{{operacion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="button-logout" type="button" *ngIf="showKeys()" (click)="pressButton()"><i class="fa-solid fa-arrow-right-from-bracket icono"></i> LogOut</button>
+
+</nav>

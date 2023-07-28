@@ -1,0 +1,14 @@
+<div class="profile-container">
+    <div class="profile">
+        <button type="button" class="fa-solid fa-arrow-left volver" routerLink="/home" title="Volver"></button>
+        <form (submit)="sendPhotoProfile(photo)">
+            <div class="photo_profile">
+                <img [src]="photo_profile" alt="" (error)="imgError()">
+            </div>
+            <div class="input-photo-content">
+                <input type="text" name="photo" #photo placeholder="Url Imagen">
+            </div>
+            <button type="submit">Subir</button>
+        </form>
+    </div>
+</div>
