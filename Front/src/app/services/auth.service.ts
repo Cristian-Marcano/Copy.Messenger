@@ -17,4 +17,7 @@ export class AuthService {
   validateToken():Observable<{acceso:string|true}>{
     return this.http.get<{acceso:string|true}>(this.url+'/validate');
   }
+  invalidateToken():Observable<{acceso:string|true}>{
+    return this.http.get<{acceso:string|true}>(this.url+'/invalidate');
+  }
 }
